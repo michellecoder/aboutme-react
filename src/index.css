@@ -100,7 +100,7 @@ code {
     flex-direction: column;
     width: 400px;
     align-items: flex-end;
-    font-size: 48px;
+    font-size: 36px;
   }
   
   .row-title h2 {

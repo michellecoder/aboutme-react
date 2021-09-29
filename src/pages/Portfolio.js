@@ -4,7 +4,6 @@ function Portfolio () {
     return (
         <ProjectCard />
     )
-
 }
 
 export default Portfolio;

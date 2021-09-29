@@ -8,7 +8,7 @@ function NavBar ({currentPage, handlePageChange}) {
                 <li><a  onClick={() => handlePageChange("AboutMe")} >About Me</a></li>
                 <li><a  onClick={() => handlePageChange("Portfolio")}>Work</a></li>
                 <li><a  onClick={() => handlePageChange("Contact")}>Contact Me</a></li>
-                <li><a href="https://www.linkedin.com/in/sherielgin/" >Resume</a></li>
+                <li><a href="./assets/selginresume2020.pdf" >Resume</a></li>
             </ul>
         </nav>
     </header>
