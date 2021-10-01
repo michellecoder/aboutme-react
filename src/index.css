@@ -58,31 +58,11 @@ code {
   
    header li {
      display: inline;
-     margin-right: 5px;
-     border-bottom: 3px solid var(--lightblue);
+     margin-right: 25px;
+     padding: 10px 20px;
+     box-shadow: 1px 3px;
    }
   
-   /* Set style for banner bar, 2nd section on page */
-   banner {
-     display: flex;
-     width: 100vw;
-     min-height: 300px;
-     justify-content: flex-end;
-     align-items: flex-end;
-     background-image: url("./assets/banner.jpg");
-     background-repeat:no-repeat;
-     background-size: auto;   
-   }
-  
-   banner h2 {
-     font-size: 32px;
-    margin: 30px;
-    padding: 15px;
-     background-color:var(--lightblue);
-     color:var(--darkblue);
-    }
-  
-    /* MAIN CONTIANS 3 PRIMARY SECITONS: About Me, Work/project portfolio display & contact me sections */
     main {
     font-size: 30px;
     }
@@ -94,15 +74,6 @@ code {
       margin-top: 100px;
   }
   
-  /* Create column effect - each row has a sidebar title that lines up on left of page */
-  .row-title {
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    align-items: flex-end;
-    font-size: 36px;
-  }
-  
   .row-title h2 {
     margin: 0;
     margin-right: 50px;
@@ -111,13 +82,12 @@ code {
   /* Add header & paragraph styles for row content sections */
   .row-content h3 {
     font-size:36px;
-    margin: 5px 10px;
+    margin: 5px 15px;
   }
   
   .row-content {
-    /* display: block; */
-    border-left: 5px solid  var(--darkblue);
-    width: 100%;
+    margin: 50px;
+    width: 95%;
   }
   
   .row-content p {
@@ -221,42 +191,60 @@ code {
     justify-content: center;
     font-size: 24px;
     color: var(--darkblue);
-    border-left: 5px solid  var(--darkblue);
     width: 100%;
   }
-  
-  .row-contactme ul {
+  .form {
+    margin: 10%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
+    flex-direction: column;
+  }  
+
+  .form input {
+    padding: 10px;
+    margin: 10px;
+    background-color: hsl(200, 57%, 93%);
+    font-size: 24px;
   }
-  
-  .row-contactme li {
-    font-size: 36px;
-    list-style-type: none;
-    margin-right: 5px;
-    border-bottom: 3px solid var(--darkblue);
+  .form textarea {
+    padding: 10px;
+    margin: 10px;
+    background-color: hsl(200, 57%, 93%);
+    font-size: 24px;
   }
-  
+  .formRow {
+    align-content: space-between;
+  }
+
+  #nameField  {
+    width: 48%;
+  }
+  #emailField {
+    width: 48%;
+  }
+  #messageField {
+    margin:30px 10px;
+    width:97%;
+    height: 250px;
+    vertical-align: top;
+  }
+  #contactFormButton {
+  width: 100px;
+  align-self: center;
+  }
   /* Adjust appearance of links in contact me elements, remove bullets, adjust colors & hover effects.  */
   .row-contactme a {
     text-decoration: none;
     color: var(--darkblue);
   }
   
-  .row-contactme a:link a:visited {
-    color: var(--darkblue);
-  }
-  
   .row-contactme a:hover a:active {
     color: white;
+    opacity: 0.70;
   }
   
   /* Add spacing at bottom of page with blank footer element  */
   footer {
-    margin-top: 80px;
+    margin-top: 50px;
   }
   
   @media screen and (max-width: 1280px) {

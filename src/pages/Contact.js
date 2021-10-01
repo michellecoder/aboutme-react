@@ -4,50 +4,76 @@ function Contact() {
   // Here we set two state variables for firstName and lastName using `useState`
   const [Name, setName] = useState('');
   const [Email, setEmail] = useState('');
+  const [Message, setMessage] = useState('');
+  const [ErrorMessage, setErrorMessage] = useState('');
 
   const handleInputChange = (e) => {
-    // Getting the value and name of the input which triggered the change
     const { name, value } = e.target;
 
-    // Ternary statement that will call either setFirstName or setLastName based on what field the user is typing in
-    return name === 'Name' ? setName(value) : setEmail(value);
+    if (name === 'Name') {
+      setName(value);
+    }
+    else if (name === 'Email') {
+      setEmail(value);
+    }
+    else if (name === 'Message') {
+      setMessage(value);
+    }
   };
 
   const handleFormSubmit = (e) => {
-    // Preventing the default behavior of the form submit (which is to refresh the page)
+    // Preventing default page refresh
     e.preventDefault();
 
-    // Alert the user their first and last name
-    alert(`Hello ${Name} at ${Email}`);
-    //clear the inputs, reset state values back to empty
+    alert(`Form submitted`);
+
+    if (!{Message}) {
+      setErrorMessage(`You must enter a message above.`);
+    }
+    //clear fields
     setName('');
     setEmail('');
+    setMessage('');
+    setErrorMessage('');
   };
 
   return (
     <div>
-      <p>
-        Hello {Name} at {Email}
-      </p>
-      <form className="form">
-        <input
-          value={Name}
-          name="Name"
-          onChange={handleInputChange}
-          type="text"
-          placeholder="Name"
-        />
-        <input
-          value={Email}
-          name="Email"
-          onChange={handleInputChange}
-          type="text"
-          placeholder="Email Address"
-        />
-        <button type="button" onClick={handleFormSubmit}>
-          Submit
-        </button>
-      </form>
+      <div>
+        <form className="form">
+          <div class="formRow">
+          <input
+            id="nameField"
+            value={Name}
+            name="Name"
+            onChange={handleInputChange}
+            type="text"
+            placeholder="Name"
+          />
+          <input
+          id="emailField"
+            value={Email}
+            name="Email"
+            onChange={handleInputChange}
+            type="email"
+            required="true"
+            pattern="/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/"
+            placeholder="Email Address"
+          />
+          </div>
+          <textarea
+            id='messageField'
+            value={Message}
+            name="Message"
+            onChange={handleInputChange}
+            placeholder="Message"
+          />
+          <button type="button" id="contactFormButton" onClick={handleFormSubmit}>
+            Submit
+          </button>
+        </form>
+        <label name="ErrorMessage" value={ErrorMessage} />         
+      </div>
     </div>
   );
 }

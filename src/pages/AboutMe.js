@@ -2,10 +2,6 @@ function AboutMe () {
     return (
         <>
          <section id="aboutme" class="row">
-            <div class="row-title">
-                <h2 >About</h2>
-                <h2>Me</h2>
-            </div>
             <div class="row-content">
                 <h3>My Career Story</h3>
                 <p>
@@ -21,7 +17,7 @@ function AboutMe () {
                    I don't get to use code in my current roles beyond a bit of script doctoring. Although I enjoy helping others, my creative side is relatively untapped.  
                    I decided to jump into the UW Web Development Boot Camp to see where learning to code can take me. My hope is to apply these skills to open source projects.
                    While I have participated in the OS sphere at the community level, I have not contributed any code. I would be thrilled to eventually learn enough to make real
-                   concrete contribution to the OS ecosphere. 
+                   concrete contributions to the OS ecosphere. 
                 </p>
                 <p>
                    Ultimately I would like to create my own open source project to create online opportunities for a new kind of spiritual experience to folks who have not
