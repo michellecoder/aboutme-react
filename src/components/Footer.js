@@ -8,6 +8,7 @@ function Footer({ currentPage, handlePageChange }) {
                     <a href="https://twitter.com/deathbytang" ><img src="/aboutme-react/assets/twitter-120.png" alt="Twitter Icon" /></a>
                 </div>
             </section>
+            <footer></footer>
         </>
     )
 }

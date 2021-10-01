@@ -46,7 +46,6 @@ code {
      justify-content: space-between;
      background-color:var(--darkblue);
    }
-  
    header h1 {
      margin-bottom: 20px;
      margin-left: -5px;
@@ -55,25 +54,25 @@ code {
      background-color: var(--lightblue);
      color: var(--darkblue);
    }
-  
    header li {
      display: inline;
      margin-right: 25px;
      padding: 10px 20px;
      box-shadow: 1px 3px;
    }
-  
     main {
     font-size: 30px;
     }
-  
+  nav a:hover {
+    opacity: 0.70;
+  }
+
     /* Set primary sections as individual rows */
     .row {
       display: flex;
       justify-content: flex-start;
-      margin-top: 100px;
+      margin-top: 50px;
   }
-  
   .row-title h2 {
     margin: 0;
     margin-right: 50px;
@@ -81,20 +80,20 @@ code {
   
   /* Add header & paragraph styles for row content sections */
   .row-content h3 {
-    font-size:36px;
+    font-size: 46px;
     margin: 5px 15px;
   }
-  
+  .row-content p {
+    margin:10px 20px;
+    font-size: 32px;
+    font-family: 'Dosis', sans-serif;
+    padding: 10px;
+  }
   .row-content {
     margin: 50px;
     width: 95%;
-  }
-  
-  .row-content p {
-    margin:10px 20px;
-    font-size: 24px;
-  }
-  
+  } 
+
   /* 2nd section displays project links as boxes, top box largest, bottom boxes column stack, 2 per row.  */
   .project-box {
     width:100%;
@@ -103,7 +102,6 @@ code {
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  
   .project-box :hover {
     opacity: 0.70;
   }
@@ -119,14 +117,12 @@ code {
      flex-direction: column;
      margin-left: -20px;
   }
-  
   .project-box .title-box h3 {
     font-size: 36px;
     color: var(--darkblue);
     margin: 0;
     margin-top: 15px;
   }
-  
   .project-box .title-box h4 {
     font-size: 20px;
     color: var(--darkblue);
@@ -162,22 +158,18 @@ code {
     flex-shrink: 1;
     flex-basis: 47%;
   }
-  
   #led {
     background-image: url("./assets/proj-led-lg.jpg");
     resize: both;
   }
-  
   #calculator {
     background-image: url("./assets/proj-calc-lg.jpg");
     resize: both;
   }
-  
   #puzzle {
     background-image: url("./assets/proj-puzzle-lg.jpg");
     resize: both;
   }
-  
   #run {
     background-image: url("./assets/proj-run-lg.jpg");
     resize: both;
@@ -198,7 +190,6 @@ code {
     display: flex;
     flex-direction: column;
   }  
-
   .form input {
     padding: 10px;
     margin: 10px;
@@ -214,7 +205,6 @@ code {
   .formRow {
     align-content: space-between;
   }
-
   #nameField  {
     width: 48%;
   }
@@ -231,20 +221,16 @@ code {
   width: 100px;
   align-self: center;
   }
-  /* Adjust appearance of links in contact me elements, remove bullets, adjust colors & hover effects.  */
-  .row-contactme a {
-    text-decoration: none;
-    color: var(--darkblue);
-  }
-  
-  .row-contactme a:hover a:active {
-    color: white;
+  .row-contactme a:hover {
     opacity: 0.70;
+  }
+  .row-contactme img {
+    max-width: 48px;
   }
   
   /* Add spacing at bottom of page with blank footer element  */
   footer {
-    margin-top: 50px;
+    margin-bottom: 50px;
   }
   
   @media screen and (max-width: 1280px) {
