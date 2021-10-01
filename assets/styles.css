@@ -1,0 +1,254 @@
+/* Set up initial styles for full page to include: color theme as variables for page,
+   initial font sytles/colors, remove margins, set background. */
+:root {
+  --darkblue: #092578;
+  --lightblue: #739fff;
+  --backgroundblue: #c9d1f0;
+  }
+
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: var(--backgroundblue);
+    color: black;
+ }
+
+ a {
+   color: var(--lightblue);
+   text-decoration: none;
+ }
+
+ /* Set styles for header to include main title & nav bar links */
+ header {
+   font-size: 36px;
+   color: var(--lightblue);
+   display: flex;
+   padding: 0 5px;
+   justify-content: space-between;
+   background-color:var(--darkblue);
+ }
+
+ header h1 {
+   margin-bottom: 20px;
+   margin-left: -5px;
+   padding: 5px 5px;
+   padding-left: 100px;
+   background-color: var(--lightblue);
+   color: var(--darkblue);
+ }
+
+ header li {
+   display: inline;
+   margin-right: 5px;
+   border-bottom: 3px solid var(--lightblue);
+ }
+
+ /* Set style for banner bar, 2nd section on page */
+ banner {
+   display: flex;
+   width: 100vw;
+   min-height: 300px;
+   justify-content: flex-end;
+   align-items: flex-end;
+   background-image: url("/assets/banner.jpg");
+   background-repeat:no-repeat;
+   background-size: auto;   
+ }
+
+ banner h2 {
+   font-size: 32px;
+  margin: 30px;
+  padding: 15px;
+   background-color:var(--lightblue);
+   color:var(--darkblue);
+  }
+
+  /* MAIN CONTIANS 3 PRIMARY SECITONS: About Me, Work/project portfolio display & contact me sections */
+  main {
+  font-size: 30px;
+  }
+
+  /* Set primary sections as individual rows */
+  .row {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 100px;
+}
+
+/* Create column effect - each row has a sidebar title that lines up on left of page */
+.row-title {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  align-items: flex-end;
+  font-size: 48px;
+}
+
+.row-title h2 {
+  margin: 0;
+  margin-right: 50px;
+}
+
+/* Add header & paragraph styles for row content sections */
+.row-content h3 {
+  font-size:36px;
+  margin: 5px 10px;
+}
+
+.row-content {
+  /* display: block; */
+  border-left: 5px solid  var(--darkblue);
+  width: 100%;
+}
+
+.row-content p {
+  margin:10px 20px;
+  font-size: 24px;
+}
+
+/* 2nd section displays project links as boxes, top box largest, bottom boxes column stack, 2 per row.  */
+.project-box {
+  width:100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project-box :hover {
+  opacity: 0.70;
+}
+
+/* Each project box has a title tab like box flush on left of box. Larger text is project title, smaller text below is technology used  */
+.project-box .title-box {
+   border: 5px solid var(--lightblue);
+   background-color: var(--lightblue);
+   display: flex;
+   flex-basis: 260px;
+   height: 125px;
+   justify-content: flex-end;
+   flex-direction: column;
+   margin-left: -20px;
+}
+
+.project-box .title-box h3 {
+  font-size: 36px;
+  color: var(--darkblue);
+  margin: 0;
+  margin-top: 15px;
+}
+
+.project-box .title-box h4 {
+  font-size: 20px;
+  color: var(--darkblue);
+  margin: 0;
+  margin-top: 10px;
+} 
+
+/* Styles for larger/top project box  */
+.lg-project-box {
+   width: 100%;
+   min-height: 600px;
+   border: 4px solid var(--lightblue);
+   margin-left: 15px;
+   margin-right: 15px;
+   padding: 20px;
+   display: flex;
+  }
+
+/* Each project box has an ID assigned & associated image  */
+#surf {
+  background-image: url("/assets/proj-surf-lg.jpg");
+}
+
+/* Projects listed after initial are smaller, stack as columns, 2 per row on desktop, 1 per row on smaller displays. */
+.sm-project-box {
+  min-height: 300px;
+  border: 4px solid var(--lightblue);
+  display: flex;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 25px;
+  padding: 20px;
+  flex-shrink: 1;
+  flex-basis: 47%;
+}
+
+#led {
+  background-image: url("/assets/proj-led-lg.jpg");
+  resize: both;
+}
+
+#calculator {
+  background-image: url("/assets/proj-calc-lg.jpg");
+  resize: both;
+}
+
+#puzzle {
+  background-image: url("/assets/proj-puzzle-lg.jpg");
+  resize: both;
+}
+
+#run {
+  background-image: url("/assets/proj-run-lg.jpg");
+  resize: both;
+}
+
+/* Provide container to add justified contact data as row displayed list - div within row div */
+.row-contactme {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 5px;
+  justify-content: center;
+  font-size: 24px;
+  color: var(--darkblue);
+  border-left: 5px solid  var(--darkblue);
+  width: 100%;
+}
+
+.row-contactme ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.row-contactme li {
+  font-size: 36px;
+  list-style-type: none;
+  margin-right: 5px;
+  border-bottom: 3px solid var(--darkblue);
+}
+
+/* Adjust appearance of links in contact me elements, remove bullets, adjust colors & hover effects.  */
+.row-contactme a {
+  text-decoration: none;
+  color: var(--darkblue);
+}
+
+.row-contactme a:link a:visited {
+  color: var(--darkblue);
+}
+
+.row-contactme a:hover a:active {
+  color: white;
+}
+
+/* Add spacing at bottom of page with blank footer element  */
+footer {
+  margin-top: 80px;
+}
+
+@media screen and (max-width: 1280px) {
+  .project-box {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+/* END OF STYLESHEET  */
